@@ -6,7 +6,7 @@ function App() {
    console.log('I run all the time');
    const [keyword, setKeyword] = useState('');
    const onChange = (event) => setKeyword(event.target.value);
-   // 두번째 인자인 배열이 비어있음, 처음에만 실행된다.
+   // 두번째 인자인 dependencies 배열이 비어있음, 처음에만 실행된다.
    useEffect(() => {
       console.log('CALL THE API...');
    }, []);
