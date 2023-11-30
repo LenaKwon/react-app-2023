@@ -46,6 +46,8 @@ function Home(){
                   <Movie
                   // key는 map 안에서 component를 render할때만 씀.꼭 써줄것
                   key={movie.id}
+                  //dynamic url주소를 만들기 위해 id를 prop으로 보냄
+                  id={movie.id}
                      title={movie.title}
                      coverImg={movie.medium_cover_image}
                      summary={movie.summary}
