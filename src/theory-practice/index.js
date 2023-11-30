@@ -10,7 +10,7 @@ root.render(
   //  <React.StrictMode>
       // {/* <App />  */}
       //{/* <Crypto /> */}
-      <App />
+      // <App />
     // </React.StrictMode>,
 );
 
