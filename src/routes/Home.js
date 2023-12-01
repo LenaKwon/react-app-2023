@@ -3,6 +3,7 @@
 // ../ 현재위치의 상단폴더(src)에서 component/Movie를 찾아야 함.
 import Movie from '../component/Movie';
 import { useState, useEffect } from 'react';
+import styles from "./Home.modules.css";
 
 function Home(){
     const [loading, setLoading] = useState(true);
@@ -35,12 +36,12 @@ function Home(){
 
    console.log(movies);
    return (
-      <div>
-         <h1>Movie App</h1>
+      <div className={styles.container}>
          {loading ? (
-            <h1>Loading...</h1>
+            <div className={styles.loader}><span>Loading...</span></div>
          ) : (
-            <div>
+            <div className={styles.movies}>
+               <h1 className={styles.title}>Movie App</h1>
                {movies.map((movie) => (
                 // 안에 쓴 html 코드를 묶어 컴포넌트를 만들어 필요한 props 보내기
                   <Movie
