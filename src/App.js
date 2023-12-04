@@ -3,7 +3,7 @@ import Home from "./routes/Home";
 import Detail from "./routes/Detail";
 function App() {
    return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
          {/* Routes 는 한번에 하나의 route를 렌더링하려고 씀 */}
          <Routes>    
             {/* path는 url 주소 */}
