@@ -1,4 +1,68 @@
-.container {
+
+
+/* style */
+body{
+   margin: 0;
+   background-color: black;
+ }
+ 
+ .wrap{
+   position: relative;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ /* header */
+ .header{
+   padding: 20px;
+ }
+ .header h1{
+   font-family: 'Vitro_core';
+   font-size: 30px;
+   color: #fff;
+ }
+ 
+ .header h1 a{
+   text-decoration: none;
+   color: #00ff37;
+ }
+ 
+ .close{
+   position: absolute;
+   left: 20px;
+   top: 20px;
+ }
+ .close svg{
+   font-size: 30px;
+   color: #fff;
+ }
+ 
+ .loader{
+   font-family: 'SBAggroB';
+   font-size: 30px;
+   color: #00ff37;
+   padding: 20px;
+ }
+/* movie */
+.movie_box{
+   padding: 10px;
+ }
+ 
+ .movie_title{
+   font-family: 'SBAggroB';
+   font-size: 20px;
+   color: #fff;
+   padding-left: 10px;
+   margin-bottom: 10px;
+ }
+ /* 이 부분이 리스트를 한줄에 여러개 정렬하는 부분 */
+ .movie_list{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content:space-between;
+ }
+
+/* .container {
    height: 100%;
    display: flex;
    justify-content: center;
@@ -13,6 +77,11 @@
    font-weight: 300;
 }
 
+.wrap{
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
 .movies {
    display: grid;
    grid-template-columns: repeat(5, minmax(300px, 1fr));
@@ -22,7 +91,7 @@
    padding-top: 70px;
 }
 
-/* @media screen and (max-width: 1090px) {
+@media screen and (max-width: 1090px) {
    .movies {
       grid-template-columns: 1fr;
       width: 100%;

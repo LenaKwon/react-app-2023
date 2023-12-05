@@ -4,12 +4,29 @@ import styles from './Movie.module.css';
 
 // 자꾸 실수하는 부분: return (); 과 함수인자({}) 안에 중괄호 넣는것
 // 우리가 props로 가져오는 것은 객체이기 때문에 객체안의 요소를 가져올때는 {}중괄호 안에 요소의이름을 쓴다.
-function Movie({ id, coverImg, title, year, summary, genres }) {
+function Movie({ id, coverImg, title, year, summary, genres, rating }) {
    return (
-     <div className={styles.movie}>
-      
-       <img src={coverImg} alt={title} className={styles.movie_img} />
-       <div>
+      <div className={styles.movie_item}>
+         <div className={styles.movie_img}>
+            <img
+               src={coverImg}
+               alt={title}
+            />
+            <div className={styles.movie_imgbox}>
+               <div className={styles.movie_imgwrap}>
+                  {/* <p className={styles.movie_imgRating}>{rating}/10</p> */}
+                  {/* <a className={styles.movie_imgBtn} href={`/movie/${id}`} >Detail</a> */}
+                  <Link
+                     to={`/movie/${id}`}
+                     className={styles.movie_imgBtn}>
+                     {title}
+                  </Link>
+               </div>
+            </div>
+            {/* <h2 className={styles.movie_title}>{title}</h2> */}
+         </div>
+
+         {/* <div>
          <h2 className={styles.movie_title}>
            <Link to={`/movie/${id}`}>{title}</Link>
          </h2>
@@ -20,20 +37,15 @@ function Movie({ id, coverImg, title, year, summary, genres }) {
              <li key={g}>{g}</li>
            ))}
          </ul>
-       </div>
-     </div>
+       </div> */}
+      </div>
    );
- }
-         // {/* 링크를 사용할 때 보통 사용하는 a 태그는 페이지를 새로고침하기 때문에
-         // react router의 Link 컴포넌트를 사용해서 표현한다. 속도측면에서 빠름 */}
-         // {/* <a href="/movie"><h1>{title}</h1></a> */}
-         // {/* <Link to="/movie/:id"><h1>{title}</h1></Link> */}
-         // {/* 여기서의 객체인자로 받아오는 id는 {id}로 표시해야함 */}
-         
-   
-
-
-   
+}
+// {/* 링크를 사용할 때 보통 사용하는 a 태그는 페이지를 새로고침하기 때문에
+// react router의 Link 컴포넌트를 사용해서 표현한다. 속도측면에서 빠름 */}
+// {/* <a href="/movie"><h1>{title}</h1></a> */}
+// {/* <Link to="/movie/:id"><h1>{title}</h1></Link> */}
+// {/* 여기서의 객체인자로 받아오는 id는 {id}로 표시해야함 */}
 
 Movie.propTypes = {
    id: PropTypes.number.isRequired,

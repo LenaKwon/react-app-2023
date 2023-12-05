@@ -29,7 +29,7 @@ function Detail(){
          description={ movie.description_full}
          rating={movie.rating}
          genres={movie.genres}
-         img={movie.small_cover_image}/>
+         img={movie.large_cover_image}/>
         }
         
         </div>

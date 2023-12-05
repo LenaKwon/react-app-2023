@@ -9,23 +9,7 @@ function Home() {
    const [loading, setLoading] = useState(true);
    const [movies, setMovies] = useState([]);
 
-   //const [selectImg, setImg] = useState();
-
-   // 이건 chaining하는 코드라 async await 코드로 쓰면 더 간단.
-   //    useEffect(() => {
-   //       fetch('https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year')
-   //          .then((response) => response.json())
-   //          .then((json) => {
-   //             setMovies(json.data.movies);
-   //             setLoading(false);
-   //          });
-   //    }, []);
-
-   // async await 로 쓴 코드
    const getMovies = async () => {
-      // const response = await fetch('https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year');
-      // const json = await response.json();
-      // 위 코드 한줄로 줄인 코드
       const json = await (await fetch('https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year')).json();
       setMovies(json.data.movies);
       setLoading(false);
@@ -33,20 +17,22 @@ function Home() {
    useEffect(() => {
       getMovies();
    }, []);
-
    console.log(movies);
    return (
-      <div className={styles.container}>
+      <div className={styles.wrap}>
          {loading ? (
             <div className={styles.loader}>
                <span>Loading...</span>
             </div>
          ) : (
-            <div className={styles.movies}>
+            <div>
                <div className='header'>
-                  <h1 className={styles.title}>Movie App</h1>
+                  <h1>
+                     <a href='https://lenakwon.github.io/react-app-2023/'>Movie</a>
+                  </h1>
                </div>
-
+                <div className='movie_box'>
+                    <div className='movie_list'>
                {movies.map((movie) => (
                   // 안에 쓴 html 코드를 묶어 컴포넌트를 만들어 필요한 props 보내기
                   <Movie
@@ -55,12 +41,15 @@ function Home() {
                      //dynamic url주소를 만들기 위해 id를 prop으로 보냄
                      id={movie.id}
                      title={movie.title}
-                     coverImg={movie.large_cover_image}
+                     coverImg={movie.medium_cover_image}
                      summary={movie.summary}
                      genres={movie.genres}
                      rating={movie.rating}
                   />
+                  
                ))}
+               </div>
+               </div>
             </div>
          )}
       </div>
