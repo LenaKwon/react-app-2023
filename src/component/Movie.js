@@ -4,17 +4,19 @@ import styles from './Movie.module.css';
 
 // 자꾸 실수하는 부분: return (); 과 함수인자({}) 안에 중괄호 넣는것
 // 우리가 props로 가져오는 것은 객체이기 때문에 객체안의 요소를 가져올때는 {}중괄호 안에 요소의이름을 쓴다.
-function Movie({ id, coverImg, title,rating }) {
+function Movie({ id, coverImg, title, rating }) {
    return (
-      // movie_item 과 movie_img className이 Movie_movie_item__6g31L로 뜸..왜? 
-      // 그래서 여기에 css가 적용이 안됨.
       <div className={styles.movie_item}>
          <div className={styles.movie_img}>
             <img
                src={coverImg}
                alt={title}
             />
-            {/* 그리고 이 밑에 두개의 클래스가 생성이 안됨 '텍스트'로 바꾸니 나타남*/}
+            {/* 그리고 이 밑에 두개의 클래스가 생성이 안됨 '텍스트'로 바꾸니 나타나긴 했지만 css적용안되어 원상복구*/}
+            {/* 달라진것은 없고 div 안에 p태그 활성화하고, Link 컴포넌트 활성화 한뒤 태그안 텍스트를
+            {title}에서 Detail로 바꾸었더니 css 정상 작동함. */}
+            {/* imgBox안의 요소들 기본세팅 opacity:0 으로 둔 후 
+            img hover 시에 imgBox opacity:1 로 줌, 위치는 부모는 relative, 겹쳐서 숨겨두는 imgBox는 absolute*/}
             <div className={styles.movie_imgBox}>
                <div className={styles.movie_imgWrap}>
                   <p className={styles.movie_imgRating}>{rating}/10</p>

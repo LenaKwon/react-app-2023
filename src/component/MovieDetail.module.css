@@ -1,15 +1,53 @@
 
+
+/* header */
+.header{
+  padding: 20px;
+}
+.header h1{
+  font-family: 'Vitro_core';
+  font-size: 30px;
+  color: #fff;
+}
+
+.header h1 a{
+  text-decoration: none;
+  color: #00ff37;
+}
+
+.close{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.svg{
+  width: 2em;
+  height: 2em;
+  background-color: white;
+  background:url('cancel.svg') no-repeat 0 0;
+  /* font-size: 30px; */
+  /* color: #fff; */
+}
+
+.loading{
+  font-family: 'SBAggroB';
+  font-size: 30px;
+  color: #00ff37;
+  padding: 20px;
+}
+
+
 .movie_detail{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
   
   .movie_detailWrap{
     display: flex;
