@@ -19,7 +19,19 @@ function MovieDetail({ title, description, rating, genres, img, year }) {
                   <ul className={styles.movie_detailGenres}><li>{`${genres} `}</li></ul>
                   <p className={styles.movie_imgRating}>{rating}/10</p>
                   <p className={styles.movie_description}>{description.length>235?`${description.slice(0,235)}...`:description}</p>
-                    <p>{year}</p>
+                  <p>{year}</p>
+                  {/* <div>
+         <h2 className={styles.movie_title}>
+           <Link to={`/movie/${id}`}>{title}</Link>
+         </h2>
+         <h3 className={styles.movie_year}>{year}</h3>
+         <p>{summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}</p>
+         <ul className={styles.movie_genres}>
+           {genres.map((g) => (
+             <li key={g}>{g}</li>
+           ))}
+         </ul>
+       </div> */}
                </div>
             </div>
          </div>

@@ -20,8 +20,9 @@ function Home() {
    console.log(movies);
    return (
       <div className={styles.wrap}>
+         {/* 이 아래코드는{}로 감싸져 있어서 className을 'text'로 해야 적용됨 */}
          {loading ? (
-            <div className={styles.loader}>
+            <div className='loader'>
                <span>Loading...</span>
             </div>
          ) : (
@@ -31,24 +32,23 @@ function Home() {
                      <a href='https://lenakwon.github.io/react-app-2023/'>Movie</a>
                   </h1>
                </div>
-                <div className='movie_box'>
-                    <div className='movie_list'>
-               {movies.map((movie) => (
-                  // 안에 쓴 html 코드를 묶어 컴포넌트를 만들어 필요한 props 보내기
-                  <Movie
-                     // key는 map 안에서 component를 render할때만 씀.꼭 써줄것
-                     key={movie.id}
-                     //dynamic url주소를 만들기 위해 id를 prop으로 보냄
-                     id={movie.id}
-                     title={movie.title}
-                     coverImg={movie.medium_cover_image}
-                     summary={movie.summary}
-                     genres={movie.genres}
-                     rating={movie.rating}
-                  />
-                  
-               ))}
-               </div>
+               <div className='movie_box'>
+                  <div className='movie_list'>
+                     {movies.map((movie) => (
+                        // 안에 쓴 html 코드를 묶어 컴포넌트를 만들어 필요한 props 보내기
+                        <Movie
+                           // key는 map 안에서 component를 render할때만 씀.꼭 써줄것
+                           key={movie.id}
+                           //dynamic url주소를 만들기 위해 id를 prop으로 보냄
+                           id={movie.id}
+                           title={movie.title}
+                           coverImg={movie.medium_cover_image}
+                           summary={movie.summary}
+                           genres={movie.genres}
+                           rating={movie.rating}
+                        />
+                     ))}
+                  </div>
                </div>
             </div>
          )}

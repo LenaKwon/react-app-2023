@@ -4,40 +4,30 @@ import styles from './Movie.module.css';
 
 // 자꾸 실수하는 부분: return (); 과 함수인자({}) 안에 중괄호 넣는것
 // 우리가 props로 가져오는 것은 객체이기 때문에 객체안의 요소를 가져올때는 {}중괄호 안에 요소의이름을 쓴다.
-function Movie({ id, coverImg, title, year, summary, genres, rating }) {
+function Movie({ id, coverImg, title,rating }) {
    return (
+      // movie_item 과 movie_img className이 Movie_movie_item__6g31L로 뜸..왜? 
+      // 그래서 여기에 css가 적용이 안됨.
       <div className={styles.movie_item}>
          <div className={styles.movie_img}>
             <img
                src={coverImg}
                alt={title}
             />
-            <div className={styles.movie_imgbox}>
-               <div className={styles.movie_imgwrap}>
-                  {/* <p className={styles.movie_imgRating}>{rating}/10</p> */}
+            {/* 그리고 이 밑에 두개의 클래스가 생성이 안됨 '텍스트'로 바꾸니 나타남*/}
+            <div className={styles.movie_imgBox}>
+               <div className={styles.movie_imgWrap}>
+                  <p className={styles.movie_imgRating}>{rating}/10</p>
                   {/* <a className={styles.movie_imgBtn} href={`/movie/${id}`} >Detail</a> */}
                   <Link
                      to={`/movie/${id}`}
                      className={styles.movie_imgBtn}>
-                     {title}
+                     Detail
                   </Link>
                </div>
             </div>
-            {/* <h2 className={styles.movie_title}>{title}</h2> */}
          </div>
-
-         {/* <div>
-         <h2 className={styles.movie_title}>
-           <Link to={`/movie/${id}`}>{title}</Link>
-         </h2>
-         <h3 className={styles.movie_year}>{year}</h3>
-         <p>{summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}</p>
-         <ul className={styles.movie_genres}>
-           {genres.map((g) => (
-             <li key={g}>{g}</li>
-           ))}
-         </ul>
-       </div> */}
+         <h2 className={styles.movie_title}>{title}</h2>
       </div>
    );
 }
