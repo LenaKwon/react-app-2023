@@ -1,4 +1,4 @@
-## react Movie-app <br/>
+## React Movie-app <br/>
 https://lenakwon.github.io/react-app-2023/ <br/>
 <br/>
 <br/>
