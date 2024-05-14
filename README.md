@@ -1,5 +1,19 @@
-## React Movie-app <br/>
-https://lenakwon.github.io/react-app-2023/ <br/>
+## React Movie-app 
+</br>
+</br>
+Visit Movie Site</br>
+https://lenakwon.github.io/react-app-2023/
+</br>
+</br>
+</br>
+
+<img width="800" alt="Screenshot 2024-05-14 at 8 19 25 PM" src="https://github.com/lenn-dev/react-app-2023/assets/37726487/284b798a-3144-436e-9c78-79ac40ea3623">
+
+<img width="800" alt="Screenshot 2024-05-14 at 8 19 46 PM" src="https://github.com/lenn-dev/react-app-2023/assets/37726487/bfdcf1e9-4d77-4fbc-8ce6-5e0d88c0ef9f">
+
+<img width="800" alt="Screenshot 2024-05-14 at 8 20 01 PM" src="https://github.com/lenn-dev/react-app-2023/assets/37726487/0e22a58a-9926-4e48-9971-92f1839cfafa">
+
+
 <br/>
 <br/>
 <br/>
