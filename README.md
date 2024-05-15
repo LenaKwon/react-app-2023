@@ -7,8 +7,8 @@ https://lenakwon.github.io/react-app-2023/
 </br>
 </br>
 
+![ScreenRecording2024-05-15at9-ezgif com-video-to-gif-converter](https://github.com/lenn-dev/react-app-2023/assets/37726487/7cd2845d-9b57-44f3-a585-6b1fb91f7a4d)
 
-![react_movie-ezgif com-video-to-gif-converter](https://github.com/lenn-dev/react-app-2023/assets/37726487/056ab682-fa38-4be4-8f61-9ae199a0804b)
 
 </br>
 </br>
