@@ -1,4 +1,5 @@
-## React Movie-app 
+# React Movie-app 
+## movie web page using react
 </br>
 </br>
 Visit Movie Site</br>
@@ -11,6 +12,15 @@ https://lenakwon.github.io/react-app-2023/
 
 
 </br>
+
+## Implemented features
+- JSX
+- State
+- Props
+- Class Componenets
+- Data Fetching
+- Routing
+  
 </br>
 </br>
 
